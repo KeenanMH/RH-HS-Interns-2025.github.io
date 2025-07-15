@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keenan's Showcase</title>
+    <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="about-me.css">
+</head>
+<body>
+    <header>
+        <h1><strong></strong>Keenan Haynes - Showcase</h1>
+        <nav>
+            <a href="file:///Users/keenanhaynes/Keenans/Internship/RH-HS-Interns-2025.github.io/interns/keenan-haynes/about-me.html">Home</a>
+            <a href="about-me.html">About Me</a>
+        </nav>
+    </header>
+    <main>
+        <section class="showcase">
+            <h2>Keenan's Photo Showcase</h2>
+            <div class="gallery">
+                <img src="https://i.ibb.co/b53TKFmS/unnamed-2.jpg" alt="photo1" onclick="openModal(this.src)" style="cursor:pointer">
+                <img src="https://i.ibb.co/p6qz4QZ1/unnamed-4.jpg" alt="photo2" onclick="openModal(this.src)" style="cursor:pointer">
+                <img src="https://i.ibb.co/qY5bFR8x/unnamed-3.jpg" alt="photo3" onclick="openModal(this.src)" style="cursor:pointer">
+                <img src="https://i.ibb.co/4ZTwZFXJ/redhatphoots.jpg" alt="photo4" onclick="openModal(this.src)" style="cursor:pointer">
+                <img src="https://i.ibb.co/DP5jS2LK/unnamed-1.jpg" alt="photo5" onclick="openModal(this.src)" style="cursor:pointer">
+                <img src="https://i.ibb.co/FkWQPG4M/image10.jpg" alt="photo6" onclick="openModal(this.src)" style="cursor:pointer">
+                <img src="https://i.ibb.co/prf7XZv9/image9.jpg" alt="photo7" onclick="openModal(this.src)" style="cursor:pointer">
+                <img src="https://i.ibb.co/zWhLL5LC/unnamed-5.jpg" alt="photo8" onclick="openModal(this.src)" style="cursor:pointer">
+                <img src="https://i.ibb.co/b5DctR3g/unnamed-9.jpg" alt="photo9" onclick="openModal(this.src)" style="cursor:pointer">
+                <img src="https://i.ibb.co/DHWh1CBg/unnamed-6.jpg" alt="photo10" onclick="openModal(this.src)" style="cursor:pointer">
+            </div>
+            <!-- Red Hat Logo -->
+            <div style="width:100%;display:flex;justify-content:center;align-items:center;margin:40px 0 0 0;">
+                <img src="../../static/logo.png" alt="Red Hat Logo" style="max-width:200px;opacity:6.85;">
+            </div>
+            <!-- Lightbox Modal -->
+            <div id="lightboxModal">
+                <span onclick="closeModal()" style="position:absolute;top:30px;right:50px;font-size:40px;color:#fff;cursor:pointer">&times;</span>
+                <img id="modalImg" src="">
+            </div>
+            <script>
+                function openModal(src) {
+                    document.getElementById('lightboxModal').style.display = 'flex';
+                    document.getElementById('modalImg').src = src;
+                }
+                function closeModal() {
+                    document.getElementById('lightboxModal').style.display = 'none';
+                }
+                // Optional: close modal when clicking outside image
+                document.getElementById('lightboxModal').addEventListener('click', function(e) {
+                    if (e.target === this) closeModal();
+                });
+            </script>
+        </section>
+        <section class="contact">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:keenanmhaynes@icloud.com">keenanmhaynes@icloud.com</a></p>
+            <p>Phone: <a href="tel:+19193020501">+1 919-302-0501</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/keenan-haynes-123456789/" target="_blank">Keenan Haynes</a></p>
+            </p>
+        </section>
+    </main>
+    <footer>
+        <p>2025 - Red Hat Internship Program Keenan Haynes</p>
+    </footer>
+</body>
+</html>
